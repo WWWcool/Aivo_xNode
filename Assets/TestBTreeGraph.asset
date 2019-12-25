@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5463994643615427644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d46cd6e7467a1488b2348923848712, type: 3}
+  m_Name: Always
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8, y: -40}
+  ports:
+    keys:
+    - output
+    - status
+    values:
+    - _fieldName: output
+      _node: {fileID: -5463994643615427644}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: status
+      _node: {fileID: -5463994643615427644}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -1031650368890973018}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  status: 2
+  output: 0
+  targetStatus: 0
+--- !u!114 &-4265674158036880407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c323c6d186218249b4f4a57d1cf8aa1, type: 3}
+  m_Name: Tick
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -536, y: -104}
+  ports:
+    keys:
+    - output
+    values:
+    - _fieldName: output
+      _node: {fileID: -4265674158036880407}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: status
+        node: {fileID: 5906879369606899004}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  output: 0
+  interval: 1
+  autoTick: 1
+--- !u!114 &-1031650368890973018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b9c373c08dfe243a4175211996bb3a, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -232, y: -152}
+  ports:
+    keys:
+    - output
+    - status
+    values:
+    - _fieldName: output
+      _node: {fileID: -1031650368890973018}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: status
+        node: {fileID: 2908856591125456404}
+        reroutePoints: []
+      - fieldName: status
+        node: {fileID: -5463994643615427644}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: status
+      _node: {fileID: -1031650368890973018}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 5906879369606899004}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  status: 0
+  output: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3224e45b83b51404cbf23775d63ad4f5, type: 3}
+  m_Name: TestBTreeGraph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 5906879369606899004}
+  - {fileID: 2908856591125456404}
+  - {fileID: 0}
+  - {fileID: -1031650368890973018}
+  - {fileID: -5463994643615427644}
+--- !u!114 &2908856591125456404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d46cd6e7467a1488b2348923848712, type: 3}
+  m_Name: Always
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8, y: -232}
+  ports:
+    keys:
+    - output
+    - status
+    values:
+    - _fieldName: output
+      _node: {fileID: 2908856591125456404}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: status
+      _node: {fileID: 2908856591125456404}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -1031650368890973018}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  status: 2
+  output: 0
+  targetStatus: 1
+--- !u!114 &5906879369606899004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3f25d6796be6544a113e5c41794f08, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -472, y: -152}
+  ports:
+    keys:
+    - status
+    - output
+    values:
+    - _fieldName: status
+      _node: {fileID: 5906879369606899004}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 5906879369606899004}
+      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: status
+        node: {fileID: -1031650368890973018}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  status: 2
+  output: 2
