@@ -11,7 +11,7 @@ namespace AivoTree
         {
             _nodes = nodes;
         }
-        
+
         public AivoTreeStatus Tick(long timeTick, T context)
         {
             var nodesToSearch = runningNode == null
@@ -19,7 +19,7 @@ namespace AivoTree
                 : _nodes.SkipWhile(node => node != runningNode);
             return nodesToSearch.Aggregate(AivoTreeStatus.Failure, (acc, curr) =>
             {
-                if (acc != AivoTreeStatus.Success)       
+                if (acc != AivoTreeStatus.Success)
                 {
                     var result = curr.Tick(timeTick, context);
                     if (result == AivoTreeStatus.Running)
