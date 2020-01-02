@@ -39,12 +39,12 @@ namespace BTree
             {
                 if (this.node != null)
                 {
-                    return this.node as AivoTree.SequenceNode<BTreeContext>;
+                    return this.node as AivoTree.SelectorNode<BTreeContext>;
                 }
                 else
                 {
-                    this.node = new AivoTree.SequenceNode<BTreeContext>(nodes.ToArray());
-                    return this.node as AivoTree.SequenceNode<BTreeContext>;
+                    this.node = new AivoTree.SelectorNode<BTreeContext>(nodes.ToArray());
+                    return this.node as AivoTree.SelectorNode<BTreeContext>;
                 }
             }
             return null;

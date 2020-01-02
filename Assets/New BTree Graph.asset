@@ -20,8 +20,8 @@ MonoBehaviour:
     values:
     - _fieldName: status
       _node: {fileID: -4840973853575252846}
-      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: AivoTree.AivoTreeStatus, BtreeAssembly, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
         node: {fileID: -1021783593008668747}
@@ -53,8 +53,8 @@ MonoBehaviour:
     values:
     - _fieldName: status
       _node: {fileID: -4666771422423389028}
-      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: AivoTree.AivoTreeStatus, BtreeAssembly, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
         node: {fileID: -1021783593008668747}
@@ -65,7 +65,7 @@ MonoBehaviour:
       _dynamic: 0
   status: 0
   needLog: 1
-  targetStatus: 0
+  targetStatus: 1
 --- !u!114 &-3194754825835930481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,8 +86,8 @@ MonoBehaviour:
     values:
     - _fieldName: output
       _node: {fileID: -3194754825835930481}
-      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: AivoTree.AivoTreeStatus, BtreeAssembly, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: status
         node: {fileID: -1021783593008668747}
@@ -118,8 +118,8 @@ MonoBehaviour:
     values:
     - _fieldName: output
       _node: {fileID: -1021783593008668747}
-      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: AivoTree.AivoTreeStatus, BtreeAssembly, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: status
         node: {fileID: 4683335680830751687}
@@ -136,8 +136,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: status
       _node: {fileID: -1021783593008668747}
-      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: AivoTree.AivoTreeStatus, BtreeAssembly, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
         node: {fileID: -3194754825835930481}
@@ -186,8 +186,8 @@ MonoBehaviour:
     values:
     - _fieldName: status
       _node: {fileID: 4683335680830751687}
-      _typeQualifiedName: AivoTree.AivoTreeStatus, Aivo, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: AivoTree.AivoTreeStatus, BtreeAssembly, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
         node: {fileID: -1021783593008668747}
@@ -198,4 +198,4 @@ MonoBehaviour:
       _dynamic: 0
   status: 0
   needLog: 1
-  targetStatus: 1
+  targetStatus: 0
