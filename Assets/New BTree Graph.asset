@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Log 003
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: -200}
+  position: {x: -72, y: 8}
   ports:
     keys:
     - status
@@ -27,7 +27,7 @@ MonoBehaviour:
         node: {fileID: -1021783593008668747}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
+      _connectionType: 1
       _typeConstraint: 2
       _dynamic: 0
   status: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: Log 002
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: -88}
+  position: {x: -72, y: -120}
   ports:
     keys:
     - status
@@ -60,12 +60,12 @@ MonoBehaviour:
         node: {fileID: -1021783593008668747}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
+      _connectionType: 1
       _typeConstraint: 2
       _dynamic: 0
   status: 0
   needLog: 1
-  targetStatus: 1
+  targetStatus: 0
 --- !u!114 &-3194754825835930481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: Root
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -680, y: -56}
+  position: {x: -696, y: -136}
   ports:
     keys:
     - output
@@ -93,7 +93,7 @@ MonoBehaviour:
         node: {fileID: -1021783593008668747}
         reroutePoints: []
       _direction: 1
-      _connectionType: 0
+      _connectionType: 1
       _typeConstraint: 0
       _dynamic: 0
   output: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: Selector
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -392, y: -40}
+  position: {x: -440, y: -136}
   ports:
     keys:
     - output
@@ -122,10 +122,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: status
-        node: {fileID: 4683335680830751687}
+        node: {fileID: -4666771422423389028}
         reroutePoints: []
       - fieldName: status
-        node: {fileID: -4666771422423389028}
+        node: {fileID: 4683335680830751687}
         reroutePoints: []
       - fieldName: status
         node: {fileID: -4840973853575252846}
@@ -143,7 +143,7 @@ MonoBehaviour:
         node: {fileID: -3194754825835930481}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
+      _connectionType: 1
       _typeConstraint: 2
       _dynamic: 0
   status: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: Log 001
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: 24}
+  position: {x: -72, y: -248}
   ports:
     keys:
     - status
@@ -193,7 +193,7 @@ MonoBehaviour:
         node: {fileID: -1021783593008668747}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
+      _connectionType: 1
       _typeConstraint: 2
       _dynamic: 0
   status: 0

@@ -6,7 +6,7 @@ using AivoTree;
 
 namespace BTree
 {
-    public class SelectorNode : BTreeNode
+    public class SequenceNode : BTreeNode
     {
         [Output] public AivoTreeStatus output;
 
@@ -14,7 +14,7 @@ namespace BTree
         {
             if (this.node != null)
             {
-                return this.node as AivoTree.SelectorNode<BTreeContext>;
+                return this.node as AivoTree.SequenceNode<BTreeContext>;
             }
             else
             {
@@ -42,8 +42,8 @@ namespace BTree
                 if (nodes.Count > 0)
                 {
                     nodes.Sort(SortConnections);
-                    this.node = new AivoTree.SelectorNode<BTreeContext>(nodes.ConvertAll(node => node.Build()).ToArray());
-                    return this.node as AivoTree.SelectorNode<BTreeContext>;
+                    this.node = new AivoTree.SequenceNode<BTreeContext>(nodes.ConvertAll(node => node.Build()).ToArray());
+                    return this.node as AivoTree.SequenceNode<BTreeContext>;
                 }
             }
             return null;

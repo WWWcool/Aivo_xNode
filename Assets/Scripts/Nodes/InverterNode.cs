@@ -7,7 +7,7 @@ namespace BTree
 {
     public class InverterNode : BTreeNode
     {
-        [Output] public AivoTreeStatus output;
+        [Output(connectionType = ConnectionType.Override)] public AivoTreeStatus output;
 
         public override AivoTree.TreeNode<BTreeContext> Build()
         {

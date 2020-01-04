@@ -34,5 +34,10 @@ namespace BTree
                 }
             }
         }
+
+        public static void LogAction()
+        {
+            print("[SimpleAIAgent][LogAction] here");
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace BTree
 {
     public class AlwaysNode : BTreeNode
     {
-        [Output] public AivoTreeStatus output;
+        [Output(connectionType = ConnectionType.Override)] public AivoTreeStatus output;
         public AivoTreeStatus targetStatus;
 
         public override AivoTree.TreeNode<BTreeContext> Build()
